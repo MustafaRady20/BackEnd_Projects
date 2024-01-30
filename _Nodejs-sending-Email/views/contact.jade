@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Contact Page
+    link(rel="stylesheet", href="css/bootstrap.css")
+  body.bg-dark
+  .container.mt-5
+    form(method="POST",action="/contact/send")
+      .row
+        .col
+          input.form-control(type='text' placeholder='First name' aria-label='First name' name="name")
+        .col
+          input.form-control(type='text' placeholder='Last name' aria-label='Last name' name="lastName")
+      .mb-3
+        label.form-label(for='exampleFormControlTextarea1') Example textarea
+        textarea#exampleFormControlTextarea1.form-control(rows='3')
+      button.btn.btn-primary(type='submit') submit
